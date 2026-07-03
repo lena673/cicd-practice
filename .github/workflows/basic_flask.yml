@@ -6,18 +6,19 @@ on:
      - main
 
 jobs:
-  run-on: ubantu-latest
+  flask-test:
+    run-on: ubantu-latest
 
-  steps:
-  - name: 拉取程式碼
-    uses: actions/checkout@v4
-  - name: 安裝 python
-    use: actions/setup-python@v5
-    with:
-    python-version: '3.11'
+    steps:
+    - name: 拉取程式碼
+      uses: actions/checkout@v4
+    - name: 安裝 python
+      use: actions/setup-python@v5
+      with:
+      python-version: '3.11'
 
-  - name: 安裝套件
-    run: pip install -r requirements.txt
+    - name: 安裝套件
+      run: pip install -r requirements.txt
 
-  - name: 執行測試
-    run: python -m pytest -v
+    - name: 執行測試
+      run: python -m pytest -v
