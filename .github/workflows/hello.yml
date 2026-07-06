@@ -10,7 +10,7 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: 打招呼s
+      - name: 打招呼
         run: echo "Hello GitHub Actions!"
       - name: 顯示目前時間
         run: date
